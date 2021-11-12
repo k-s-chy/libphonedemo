@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>{{{title}}}</title>
+    <link rel="stylesheet" href='/css/styles.css'>
+    <style>
+    table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+td {
+  background-color: #96D4D4;
+}
+    </style>
+</head>
+
+<body align=center>
+    <div class="main-content">
+        {{>header}}
+
+        
+            <table align=center style="width: 100%">
+    <colgroup>
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 30%;">
+       <col span="1" style="width: 10%;">
+       {{!-- <col span="1" style="width: 20%;"> --}}
+    </colgroup>
+    <thead>
+        <tr style = "background-color: lightgray;">
+            <th>Number</th>
+            <th>E164 Format</th>
+            <th>Type of Number</th>
+            <th>Country</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr  height = "50px">
+            <td>{{this.formattedNumber}}</td>
+            <td>{{this.e164Number}}</td>
+            <td>{{this.numberType}}</td>
+            <td>{{this.countryCode}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+            
+    </div>
+
+</body>
+
+
+
+</html>

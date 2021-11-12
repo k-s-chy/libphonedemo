@@ -1,0 +1,18 @@
+{
+  "name": "libphone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "libphonenumber-js": "^1.9.42",
+    "mongoose": "^6.0.12"
+  }
+}
